@@ -1,0 +1,23 @@
+.portfolioMainDiv .CenterDiv .threeInOne{
+    display: flex;
+    
+}
+
+.portfolioMainDiv .CenterDiv {
+    padding-left: 150px;
+}
+
+
+.portfolioMainDiv {
+    margin-top: 130px;
+}
+.portfolioMainDiv h6{
+    font-size: small;
+    font-weight: bolder;
+    color:rgba(179, 174, 174,0.5);
+}
+.portfolioMainDiv h3{
+    font-size: x-large;
+    font-weight: bolder;
+    color:rgba(179, 174, 174,0.9);
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import './contact.css'
-import {MdOutlineEmail} from 'react-icons/md'
+import {MdOutlineEmail,MdArrowCircleRight} from 'react-icons/md'
 import {AiOutlineLinkedin} from 'react-icons/ai'
 import {BsWhatsapp} from 'react-icons/bs'
 import {useRef} from 'react'
@@ -22,37 +22,41 @@ return (
 <section id="contact">
 <h5>Get in touch</h5>
 <h2>Contact me</h2>
+
 <div className="container contact__container">
 <div className="contact__options">
+<h3>By</h3>
 <article className='contact__option'>
+
 <MdOutlineEmail className='contact__option__icon'/>
-<h4>Email</h4>
+<p>  <span><MdArrowCircleRight />  </span> Email</p>
 <h5>takohclovet7@gmail.com</h5>
-<a href='mailto:aldenovpoutine99@gmail.com' target='_blank'>send a
+<a href='mailto:takohclovet7@gmail.com' target='_blank'   rel="noreferrer">send a
 message</a>
 </article>
 <article className='contact__option'>
 <AiOutlineLinkedin className='contact__option__icon'/>
-<h4>LinkedIn</h4>
+<p> <span><MdArrowCircleRight />  </span>  LinkedIn</p>
 <h5>Profile</h5>
-<a href='/#'
-target='_blank'>Tape me on LinkedIn</a>
+<a href='#nothing'
+>Tape me on LinkedIn</a>
 </article>
 <article className='contact__option'>
 <BsWhatsapp className='contact__option__icon'/>
-<h4>Whatsapp</h4>
+<p>  <span><MdArrowCircleRight />  </span>  Whatsapp</p>
 <h5>Direct message</h5>
 <a href='https://web.whatsapp.com/send?phone=+237674633142'
-target='_blank'>Whatsapp me</a>
+target='_blank'   rel="noreferrer">Whatsapp me</a>
 </article>
 </div>
+<div id="form"><h4>Sent me a direct message</h4>
 <form ref={form} onSubmit={sendEmail}>
-<input type="text" name='name' placeholder='full name' required/><br /><br />
-<input type="email" name='email' placeholder='your email' required/><br /><br />
+<input type="text" name='name' placeholder='               full name' required/><br /><br />
+<input type="email" name='email' placeholder='             your email' required/><br /><br />
 <textarea name="message" id="message" cols="30" rows="10"
-placeholder='your message' required></textarea><br /><br />
+placeholder='                 your message' required></textarea><br /><br />
 <button type="submit" className='btn btn-primary'>send message</button><br />
-</form>
+</form></div>
 </div>
 </section>
 )
