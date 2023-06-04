@@ -1,26 +1,37 @@
-.experienceMainDiv p{
+#list  .skills{
+    background-color: rgba(75, 210, 38,0.7);
+    margin: 20px;
+    width: 300px;
+    height: 210px;
+    border-radius: 20px;
+}
+#list{
+    margin: auto;
+    display: flex;
+}
+#list  .skills ul li{
+    color: white;
+    font-size: larger;
+    text-transform: uppercase;
+
+}
+
+#list  .skills h5{
+    color: rgb(92, 87, 127);
+    font-size: x-large;
     font-weight: bolder;
-    color: rgba(197, 202, 206,0.7);
-}
-.experienceMainDiv div {
-padding: 20px;
-color: rgb(255, 255, 255);
-width: 270px;
-height: 140px;
-background-color: blue;
-text-transform: uppercase;
-border-radius: 50px;
-font-size: large;
-font-weight: bolder;
-margin:auto
+    text-decoration: dashed underline ;
 }
 
-.experienceMainDiv  h3{
-    color: rgb(143, 148, 144);
-  
+#list  #backend  ul, #list   #database ul{
+    padding: 30px;
 }
 
-.experienceMainDiv #list:hover{
-background-color: white;
-color: rgb(0, 0, 0);
+#list .skills:hover {
+    background-color: rgba(21, 163, 100,0.6);
+}
+#list{
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }

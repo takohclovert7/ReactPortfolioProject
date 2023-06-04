@@ -19,7 +19,7 @@ return (
 
 <Navbar/>
 < Header/>
-<About/>
+<About />
 <Experience/><br /><br /><br /><br /><br />
 <Services/>
 <Portfolio/>

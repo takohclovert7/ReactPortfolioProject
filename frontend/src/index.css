@@ -29,7 +29,8 @@ display:none
 }
 body {
 font-family: 'Poppins', sans-serif;
-background: var(--color-bg);
+/* background: var(--color-bg); */
+ background-color: rgba(54, 149, 92, 0.9);
 color: var(--color-white);
 line-height: 1.7;
 }
