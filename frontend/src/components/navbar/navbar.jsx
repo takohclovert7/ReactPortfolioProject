@@ -7,12 +7,12 @@ import {MdHome ,MdPerson ,MdOutlineComputer,MdOutlineChatBubbleOutline, MdOutlin
         
 <div className="navBar">
     <div id="navItems">
-<ul>
-    <li id="home"><div className="two"><a href="/" > <MdHome /></a></div></li>
+<ul>  
+    <li id="home"><div className="two"><a href="#home1" > <MdHome /></a></div></li>
     <li> <div className="two"> <a href="#about">  <MdPerson /></a> </div></li>
     <li>  <div className="two"><a href="#projects">    <MdOutlineComputer /></a> </div></li>
-    <li>  <div className="two"><a  href="#me"> <MdOutlineHeartBroken /></a> </div></li>
-    <li id="letTalk">  <div className="two"><a href="letsTalk"> <MdOutlineChatBubbleOutline/></a> </div></li>
+    <li>  <div className="two"><a  href="#testimonial"> <MdOutlineHeartBroken /></a> </div></li>
+    <li id="letTalk">  <div className="two"><a href="#messageMe"> <MdOutlineChatBubbleOutline/></a> </div></li>
 </ul>
 </div></div>
     );

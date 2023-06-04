@@ -1,15 +1,28 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var app = express(); 
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const  mongoose  = require('mongoose');
 
+const dbURI = 'mongodb://localhost:27017/junior';
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+mongoose.connect( dbURI, {
+  useNewUrlParser: true,
+}).then(function(){
+  console.log('db connection successful an am listening for request now')
+}).catch(function(err){
+ console.log(err.message)
+});
+  // .then(() => {
+  //   console.log('db connection successful an am listening for request now')
+  // })
+  // .catch((err) => console.log(err));
 
-var app = express();
 
-// view engine setup
+// view engine setup  
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 

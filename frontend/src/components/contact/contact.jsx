@@ -49,14 +49,16 @@ message</a>
 target='_blank'   rel="noreferrer">Whatsapp me</a>
 </article>
 </div>
+<section id="messageMe">
 <div id="form"><h4>Sent me a direct message</h4>
 <form ref={form} onSubmit={sendEmail}>
 <input type="text" name='name' placeholder='               full name' required/><br /><br />
+<input type="file" name='file' required/><br /><br />
 <input type="email" name='email' placeholder='             your email' required/><br /><br />
 <textarea name="message" id="message" cols="30" rows="10"
 placeholder='                 your message' required></textarea><br /><br />
-<button type="submit" className='btn btn-primary'>send message</button><br />
-</form></div>
+<button type="submit" className='btn btn-primary'>TESTIFY</button><br />
+</form></div></section>
 </div>
 </section>
 )

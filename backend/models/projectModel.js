@@ -1,23 +1,24 @@
 const mongoose=require("mongoose");
+var {isEmail}=require("validator");
 
 
 const schema=mongoose.Schema({
-    projectTitle:{
+   testimonyMessage:{
         type:String,
-        require:[true, "please enter a project title"],
+        require:[true, "please enter a testimony message"],
        },
-       projectNumber:{
-     type:Number,
-        require:[true, "please enter  project number"],
+       clientEmail:{
+     type:String, 
+        require:[isEmail, "please enter  a valid email"],
        },
-       projectMnager:{
+       clientName:{
         type:String,
-        require:[true, "please entera project manager"],
+        require:[true, "please entera your name"],
        },
-    //    projectImg:{
-    //     type:Image,
-    //     require:[true, "please upload a project image"],
-    //    },
+       testtimonyImage:{
+        type:Buffer,
+        require:[true, "please upload a project image"],
+       },
 });
 
 const projectMdele=mongoose.model("project",schema);

@@ -6,7 +6,7 @@ import me from "../images/junior.jpg";
 import HeaderSocial from './HeaderSocial' //import of headerSocial component
 export const Header = () => {
 return (
-<header>
+<header><section id="home1">
 <div className='container header__container'>
 <h5>Hello I'm</h5>
 <h1>Takoh Clovert Nfua</h1>
@@ -17,7 +17,7 @@ return (
 <img src={me} alt='junior'/>
 </div>
 <a href='#contact' className='scroll__down'>Scroll down</a>
-</div>
+</div></section>
 </header>
 )
 }
