@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import "./testimonial.css";
 
 import project1Image from "../images/project1.png";
@@ -11,7 +11,7 @@ import project6Image from "../images/project6.png";
 import { Pagination, Navigation, Scrollbar, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import Testify from "../testify/testify";
 // Import Swiper styles
 import 'swiper/css';   
 import 'swiper/css/pagination';
@@ -62,6 +62,22 @@ export const Testimonial = () => {
       Cname: "Client 6",
     },
   ];
+  const [data, setData] = useState([{
+    testimonyMessage:"",
+    clientEmail: "",
+    clientName: "",
+  }]);
+  useEffect(() => {
+     fetch('http://localhost:9000/users/get/testimonies')
+       .then(response =>response.json())
+       .then(res=>{
+         setData(res);
+       
+       })
+       .catch(error => {
+         console.error(error.message);
+       });
+   }, []);
   return (
     <section id="testimonial">
       <h5>Review from client</h5>
@@ -73,18 +89,22 @@ export const Testimonial = () => {
       slidesPerView={1}
       pagination={{ clickable: true }}
       >
-        {testimonials.map((testi) => {
+        {data.map((testi) => {
           return (
-            <SwiperSlide key={testi.id} className="testimonial">
+            <SwiperSlide key={testi._id} className="testimonial">
               <div className="client__avatar">
                 <img src={testi.avatar} alt="client avatar" />
               </div>
-              <h5 className="client__name"> {testi.Cname} </h5>
-              <small className="client__review"> {testi.testimonial} </small>
+              <h4 className="client__name"> <span style={{color:"brown",marginRight:'25px'}} > Client name  </span>    {testi.clientName} </h4>
+              <h6 className="client__name"> <span  style={{color:"brown",marginRight:'25px'}} >client email </span>     {testi.clientEmail} </h6>
+              <small className="client__review"> {testi.testimonyMessage} </small>
             </SwiperSlide>
           );
-        })}
+        })} 
       </Swiper>
+{/* { showTestify &&    <Testify />  } */}
+<Testify /> 
+      {/* <button id="testify" onClick={testify}>TESTIFY</button> */}
     </section>
   );
 };

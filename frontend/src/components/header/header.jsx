@@ -8,9 +8,9 @@ export const Header = () => {
 return (
 <header><section id="home1">
 <div className='container header__container'>
-<h5>Hello I'm</h5>
-<h1>Takoh Clovert Nfua</h1>
-<h5 className='text-light'>Network Engineer </h5>   
+<h5 style={{color:"black"}}>Hello I'm</h5>
+<h1 style={{color:"black"}}>Takoh Clovert Nfua</h1>
+<h5 className='text-light'  style={{color:"black"}}>Network Engineer </h5>   
 <CTA/>
 <HeaderSocial/>
 <div className='my_image'>

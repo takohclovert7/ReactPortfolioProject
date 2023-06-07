@@ -5,7 +5,7 @@ import {AiOutlineLinkedin} from 'react-icons/ai'
 import {BsWhatsapp} from 'react-icons/bs'
 import {useRef} from 'react'
 import emailjs from 'emailjs-com'
-const Contact = () => {
+const  Contact = () => {
 const form = useRef();
 const sendEmail = (e) => {
 e.preventDefault();
@@ -18,6 +18,7 @@ console.log(result.text)
 console.log(error.text);
 });
 };
+
 return (
 <section id="contact">
 <h5>Get in touch</h5>
@@ -53,11 +54,11 @@ target='_blank'   rel="noreferrer">Whatsapp me</a>
 <div id="form"><h4>Sent me a direct message</h4>
 <form ref={form} onSubmit={sendEmail}>
 <input type="text" name='name' placeholder='               full name' required/><br /><br />
-<input type="file" name='file' required/><br /><br />
+
 <input type="email" name='email' placeholder='             your email' required/><br /><br />
 <textarea name="message" id="message" cols="30" rows="10"
 placeholder='                 your message' required></textarea><br /><br />
-<button type="submit" className='btn btn-primary'>TESTIFY</button><br />
+<button type="submit" className='btn btn-primary' id='send'>SEND MESSAGE</button><br />
 </form></div></section>
 </div>
 </section>

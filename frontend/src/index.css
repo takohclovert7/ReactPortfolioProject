@@ -12,7 +12,7 @@ text-decoration: none;
 :root{ /*as root variable we can used it everywhere*/
 --color-bg:#1f1f38; 
 --color-bg-variant:#2c2c6c;
---color-primary:#4db5ff;
+--color-primary:#000000;
 --color-primary-variant:rgba(77, 181, 255, 0.4);
 --color-white:#fff;
 --color-light:rgba(255,255,255, 0.6);
@@ -30,7 +30,7 @@ display:none
 body {
 font-family: 'Poppins', sans-serif;
 /* background: var(--color-bg); */
- background-color: rgba(54, 149, 92, 0.9);
+ background-color: wheat;
 color: var(--color-white);
 line-height: 1.7;
 }

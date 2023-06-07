@@ -1,10 +1,10 @@
 .contact__options{
-    background-color: rgb(69, 113, 193);
+    /* background-color: rgb(69, 113, 193); */
     width:300px;
     height: 500px;
     border-radius:20px ;
     margin: auto;
-  
+    border: 2px solid black;
 }
 
 .contact__option{
@@ -18,13 +18,17 @@
 
 #form{
     margin:auto;
-    background-color: rgb(69, 113, 193);
+    /* background-color: rgb(69, 113, 193);
+     */
+     border: 2px solid black;
     width: 550px;
     height: 580px;
     border-radius: 50px;
 
 }
-
+.contact__option a{
+    color:brown
+}
 #form input{
     width: 500px;
     height: 50px;
@@ -32,6 +36,7 @@
     border-radius: 20px;
     font-size: larger;
     font-weight: bolder;
+    background-color:wheat;
 }
 #form textarea{
     width: 500px;
@@ -40,17 +45,27 @@
     border-radius: 20px;
     font-size: larger;
     font-weight: bolder;
-    
+    background-color:wheat;
 
 }
-
+ #send{
+    background-color: black;
+    color: white;
+    border: none;
+}
 #form h4{
     color:black;
     font-size: large;
     font-weight: bolder;
     margin-left:130px;
 }
-
+#contact h2,#contact h5{
+    color: black;
+}
+#send:hover{
+    background-color: white;
+    color: black;
+}
 /* 
 @media screen and(max-width:300px) {
   #form{

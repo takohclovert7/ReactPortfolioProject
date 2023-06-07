@@ -1,37 +1,32 @@
-#list  .skills{
-    background-color: rgba(75, 210, 38,0.7);
-    margin: 20px;
-    width: 300px;
-    height: 210px;
-    border-radius: 20px;
-}
-#list{
-    margin: auto;
+#experience {
+    padding: 80px 0;
+  }
+  
+  .experience__container {
     display: flex;
-}
-#list  .skills ul li{
-    color: white;
-    font-size: larger;
-    text-transform: uppercase;
-
-}
-
-#list  .skills h5{
-    color: rgb(92, 87, 127);
-    font-size: x-large;
-    font-weight: bolder;
-    text-decoration: dashed underline ;
-}
-
-#list  #backend  ul, #list   #database ul{
-    padding: 30px;
-}
-
-#list .skills:hover {
-    background-color: rgba(21, 163, 100,0.6);
-}
-#list{
-    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-}
+    gap: 20px;
+  }
+  
+  .experience__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 200px;
+  }
+  
+  .experience__image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+  }
+  
+  .experience__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+  }
+  

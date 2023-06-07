@@ -1,9 +1,35 @@
 var express = require('express');
 var router = express.Router();
+const testimonialModel=require("../models/projectModel")
+
+
+
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('server up an running on port 4000');
+router.get("/get/testimonies" , async function(req, res, next) {
+
+const allTestimonies=await testimonialModel.find();
+
+console.log(allTestimonies);
+
+ res.json(allTestimonies)
+
 });
+
+
+
+router.post("/upload/testimonies",async function(req,res){
+
+   const {email,username, testimonialText}=req.body;
+    console.log(email,username, testimonialText);
+      const testimony= await testimonialModel.create({
+
+        testimonyMessage:testimonialText,
+           clientEmail:email,
+           clientName:username });
+console.log(testimony);
+    res.json({save:"successful"})
+})
+
 
 module.exports = router;

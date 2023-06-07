@@ -13,14 +13,18 @@
 }
 
 .testimonial{
-    background: var(--color-bg-variant);
+    background-color:whitesmoke;
     text-align: center;
     padding: 2rem;
     border-radius: 2rem;
     user-select: none;
+    box-shadow: black;
 
 }
-
+#testimonial h2,#testimonial h5{
+    color: black;
+    font-size: large;
+}
 .client__review{
     color: var(--color-light);
     font-weight: 300;
@@ -50,3 +54,24 @@
     }
 }
 
+#testify{
+    margin-bottom: 120px;
+    color:rgba(0, 0, 0,0.5);
+    width: 110px;
+    height: 50px;
+    background-color: rgb(77,181,255);
+    border-radius: 9px;
+    font-size: large;
+    transition-property: background-color;
+    transition-duration:0.5s ;
+    font-weight: bold;
+
+}
+
+#testify:hover{
+    background-color: white;
+}
+
+.client__name{
+    color:black
+}

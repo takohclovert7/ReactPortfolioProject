@@ -3,8 +3,8 @@ import React from 'react'
 const CTA = () => {
 return (
 <div className='cta'>
-<a href="#no_download" download className='btn'>Download CV</a>
-<a href="#contact" className='btn btn-primary'>Let's Talk</a>
+<a href="#no_download" download className='btn' id="download">Download CV</a>
+<a href="#contact" className='btn btn-primary ' id="lets">Let's Talk</a>
 </div>
 )   
 }

@@ -4,20 +4,20 @@
     }
     .aboutDivStart center{
         font-weight: bolder;
-        color: rgb(11, 237, 49);
+        color: rgb(0, 0, 0);
         margin-bottom: 40px;
       
     }
     .one{
         height: 160px;
-        background-color:  rgba(11, 237, 49,0.5);
+        background-color:  rgba(0, 0, 0, 0.9);
         width: 220px;
         margin-left:30px;
         margin-bottom:30px;
     }
     
     .one:hover{
-     background-color: rgba(21, 163, 100,0.6);
+     background-color: rgba(245, 222, 178,0.6);
         border: rgba(47, 47, 146,0.5) 1.5px solid ;
     }
     
@@ -53,12 +53,12 @@
     }
     .plainText , h4{
        text-align: justify;
-       color: rgba(207, 218, 227, 0.9);
+       color: rgba(0, 0, 0, 0.9);
        margin:15px;
     }
     .leftSide .leftMainDiv{
         height: 376px;
-        background-color: rgba(11, 237, 49,0.5);
+        background-color: rgba(0, 0, 0, 0.9);
         width: 360px;
         margin-left: 185px;
         border-radius: 50px;
@@ -83,10 +83,10 @@
     .aboutDivStart #btnTalk{
         margin-left: 130px;
         margin-bottom: 120px;
-        color:rgba(0, 0, 0,0.5);
+        color:rgba(255, 255, 255, 0.9);
         width: 110px;
         height: 50px;
-        background-color: rgb(77,181,255);
+        background-color: rgb(0, 0, 0);
         border-radius: 9px;
         font-size: large;
         transition-property: background-color;
@@ -96,4 +96,5 @@
     
     .aboutDivStart #btnTalk:hover{
         background-color: white;
+        color:black
     }

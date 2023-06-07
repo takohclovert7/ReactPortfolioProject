@@ -14,13 +14,9 @@ const schema=mongoose.Schema({
        clientName:{
         type:String,
         require:[true, "please entera your name"],
-       },
-       testtimonyImage:{
-        type:Buffer,
-        require:[true, "please upload a project image"],
-       },
+       }
 });
 
-const projectMdele=mongoose.model("project",schema);
+const projectMdele=mongoose.model("testimonyImage",schema);
 
 module.exports=projectMdele;

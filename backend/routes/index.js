@@ -4,8 +4,11 @@ var projectMdele=require("../models/projectModel");
 var mongoose=require("mongoose");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', function(req, res) {
+  res.json({
+    data:"clovert",
+  });
+
 });
 
 module.exports = router;

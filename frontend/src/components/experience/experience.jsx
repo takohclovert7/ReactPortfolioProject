@@ -1,52 +1,51 @@
-import React from "react";
-import "./experience.css"
- function Experience(){
+import React from 'react';
+import './experience.css';
 
-    return(
-<div className="experienceMainDiv">
-<p>What skills i have</p>
-<div id="list">
-    <div className="skills" id="frontend">
-        <h5>frontend skills</h5>
-    <ul>
-    <li>hmtl ,css</li>
-    <li>javascript</li>
-    <li>React js </li>
-   
-    <li>bootstrap </li>
-    <li>jquery and ajax</li>
-</ul>
+const Experience = () => {
+  const experienceData = [
+    {
+      title: 'React js expert',
+      image: 'https://i1.wp.com/qavalidation.com/wp-content/uploads/2018/02/python-logo.png',
+    },
+    {
+      title: 'C/C++ Intermediate',
+      image: 'https://wallpapercave.com/wp/wp4521293.png',
+    },
+    {
+      title: 'JavaScript (React Native)',
+      image: 'https://logos-download.com/wp-content/uploads/2019/01/JavaScript_Logo.png',
+    },
+    {
+      title: 'PyTorch',
+      image: 'https://shiftlab.github.io/pytorch/assets/images/pytorch-logo.png',
+    },
+    {
+      title: 'Database',
+      image: 'https://lazyprogrammer.me/wp-content/uploads/2015/12/Database_iStock_000020783950XSmall_0.jpg',
+    },
+    {
+      title: 'Information System Design',
+      image: 'http://huytonwithrobyce.co.uk/wp-content/uploads/2015/09/cartoon-laptop-computer-1408040.jpg',
+    },
+    {
+      title: 'UI/UX Design',
+      image: 'https://minervainfotech.com/blog/wp-content/uploads/2019/09/Untitled-6-1920x1280.jpg',
+    },
+  ];
 
-    </div>
-    <div className="skills" id="backend">
-        <h5>backend skills</h5>
-    <ul>
-    <li>node js with express </li>
-    <li> </li>
-    <li>python with django</li>
-    <li>php with lareval </li>
-    <li>java with spring boot</li>
-</ul>
-
-    </div>
-
-    <div className="skills" id="database">
-        <h5>database language</h5>
-    <ul>
-    <li>mysql database </li>
-    <li>mongo db database </li>
-    <li>mariel db database </li>
-</ul>
-
-    </div>
-</div>
-
-<h2>My Experience</h2>
-<h3>1+ YEAR EXPERIENCE</h3>
-
-
-</div>
-    );
-}
+  return (
+    <section id="experience">
+      <h3>Experience</h3>
+      <div className="experience__container">
+        {experienceData.map((experience, index) => (
+          <div key={index} className="experience__card">
+            <img src={experience.image} alt={experience.title} className="experience__image" />
+            <h4 className="experience__title">{experience.title}</h4>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Experience;

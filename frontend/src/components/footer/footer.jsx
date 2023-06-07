@@ -3,9 +3,10 @@ import "./footer.css"
  function Footer(){
 
     return(
-<div id="footer">
-<h3>TAKOH CLOVERT NFUA</h3><br />
-<p> All  Right Reserve copywrite &copy; 2023</p>
+<div id="footer"><center>
+<h3 style={{color:"black"}}>TAKOH CLOVERT NFUA</h3><br />
+<p style={{color:"black"}}> All  Right Reserve copywrite &copy; 2023</p>
+</center>
 <div id="footerNav">
     <ul>
         <li><div className="footerNav"> <a href="#home1" > GO TO TOP</a>

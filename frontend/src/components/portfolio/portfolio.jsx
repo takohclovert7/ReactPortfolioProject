@@ -16,8 +16,8 @@ import "./portfolio.css";
     return(
 <div className="portfolioMainDiv">
     <section id="projects">
-    <h6>My recent works</h6>
-    <h3>Portfolio</h3>
+    <h6 style={{color:"black"}}>My recent works</h6>
+    <h3  style={{color:"black"}}>Portfolio</h3>
     <div className="CenterDiv">
     <div className="threeInOne">
     <Projects  num={1} url={project1Image} name={'junior'}/> 
