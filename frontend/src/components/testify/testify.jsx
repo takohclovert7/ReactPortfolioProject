@@ -41,7 +41,7 @@ console.log(upload)
   
   <div className="center">
     <input type="checkbox" id="click" />
-    <label htmlFor="click" className="click-me">TESTIFY </label>
+    <label htmlFor="click" className="click-me"> TESTIFY </label>
     <div className="content"><label htmlFor="click" id="temp">x</label>
       <div className="text">
       TESTIFY

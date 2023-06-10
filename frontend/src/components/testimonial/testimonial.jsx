@@ -91,7 +91,7 @@ export const Testimonial = () => {
       >
         {data.map((testi) => {
           return (
-            <SwiperSlide key={testi._id} className="testimonial">
+            <SwiperSlide key={ testi._id} className="testimonial">
               <div className="client__avatar">
                 <img src={testi.avatar} alt="client avatar" />
               </div>
@@ -102,9 +102,9 @@ export const Testimonial = () => {
           );
         })} 
       </Swiper>
-{/* { showTestify &&    <Testify />  } */}
-<Testify /> 
-      {/* <button id="testify" onClick={testify}>TESTIFY</button> */}
+
+<Testify /  > 
+   
     </section>
   );
 };

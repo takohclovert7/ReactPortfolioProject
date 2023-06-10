@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var projectMdele=require("../models/projectModel");
+var projectMdele=require("../models/testiModel");
 var mongoose=require("mongoose");
 
 /* GET home page. */

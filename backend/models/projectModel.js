@@ -1,22 +1,12 @@
-const mongoose=require("mongoose");
-var {isEmail}=require("validator");
-
-
-const schema=mongoose.Schema({
-   testimonyMessage:{
-        type:String,
-        require:[true, "please enter a testimony message"],
-       },
-       clientEmail:{
-     type:String, 
-        require:[isEmail, "please enter  a valid email"],
-       },
-       clientName:{
-        type:String,
-        require:[true, "please entera your name"],
-       }
+const  mongoose=require("mongoose");
+const projectschema=mongoose.Schema({
+    imageUrl:String,
+    title:String,
+    gitDeomoUrl:String,
+    demoUrl:String,
 });
 
-const projectMdele=mongoose.model("testimonyImage",schema);
 
-module.exports=projectMdele;
+const projectModel=mongoose.model("projects",projectschema);
+
+module.exports=projectModel;

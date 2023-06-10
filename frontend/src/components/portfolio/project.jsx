@@ -1,8 +1,8 @@
-import React from "react";
+import React ,{useState,useEffect}from "react";
 import "./project.css"
  function Projects(props){
-const [showComp, setShowComp]=React.useState(false);
-const [hideComp, setHideComp]=React.useState(true);
+const [showComp, setShowComp]=useState(false);
+const [hideComp, setHideComp]=useState(true);
 var style =null;
 var style2={
   borderRadius:'40px',  
@@ -26,6 +26,31 @@ function hideContent(){
 
 }
 
+
+// imageUrl:"",
+// title:"",
+// gitDeomoUrl:"",
+// demoUrl:""
+// }
+const [data, setData] = useState([{
+  imageUrl:"",
+    title:"",
+    gitDeomoUrl:"",
+    demoUrl:"",
+
+}]);
+useEffect(() => {
+   fetch('http://localhost:9000/users/get/all/project')
+     .then(response =>response.json())
+     .then(res=>{
+       setData(res);
+     console.log(data);
+     })
+     .catch(error => {
+       console.error(error.message);
+     });
+ }, []);
+
     return(
 <div className="mainDivProject" onMouseOver={showContent} onMouseOut={hideContent}>
    
@@ -35,7 +60,9 @@ function hideContent(){
 <img src={props.url} alt="" />
 </div>
 <br />
-<p>project number  {props.num} <br /> project manager {props.name}</p>
+<p><span>project number  {props.num}
+ </span > <br /><span style={{color:"white"}}>project manager {props.name} </span><br /> 
+ <span style={{color:"black"}}> done by</span></p>
 <br />
 <div className="btnDiv">
 <button id="btnGit">Github</button>

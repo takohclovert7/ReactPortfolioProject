@@ -9,6 +9,7 @@ import project6Image from "../images/project6.png";
 import project7Image from "../images/project7.jpg";
 import  project8Image from "../images/project8.jpeg";
 import  project9Image from "../images/project9.jpeg";
+import UploadProject  from "../uploads/uploadProject";
 import "./portfolio.css";
  function Portfolio(){
 // since in the my recent project they are of the same nature with what is changing is just the project number and the peoject image
@@ -16,6 +17,8 @@ import "./portfolio.css";
     return(
 <div className="portfolioMainDiv">
     <section id="projects">
+   
+
     <h6 style={{color:"black"}}>My recent works</h6>
     <h3  style={{color:"black"}}>Portfolio</h3>
     <div className="CenterDiv">
@@ -37,8 +40,12 @@ import "./portfolio.css";
 <Projects num={8}  url={project8Image}  name={'takoh'}  />
 <Projects  num={9}  url={project9Image} name={'clovert'} />
 </div>
-
+<div>
+    <h2>UPLOAD A PROHJECT USING THE BELOW BUUTON</h2>
+    < UploadProject />
 </div>
+</div>
+
 
 </section>
 
