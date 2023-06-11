@@ -7,16 +7,23 @@ import HeaderSocial from './HeaderSocial' //import of headerSocial component
 export const Header = () => {
 return (
 <header><section id="home1">
-<div className='container header__container'>
-<h5 style={{color:"black"}}>Hello I'm</h5>
+
+<div className='container header__container' style={{display:"flex"}}>
+    <div className='leftHeader' >
+    <h5 style={{color:"black"}}>Hello I'm</h5>
 <h1 style={{color:"black"}}>Takoh Clovert Nfua</h1>
-<h5 className='text-light'  style={{color:"black"}}>Network Engineer </h5>   
-<CTA/>
-<HeaderSocial/>
+<h5 className='text-light'  style={{color:"black",marginButtom:"20px"}}>Network Engineer </h5>   
+<CTA  />
+<HeaderSocial  style={{color:"black"}}/>
+
+    </div>
+<div className='rightHeader'  >
 <div className='my_image'>
 <img src={me} alt='junior'/>
 </div>
-<a href='#contact' className='scroll__down'>Scroll down</a>
+</div>
+
+{/* <a href='#contact' className='scroll__down'>Scroll down</a> */}
 </div></section>
 </header>
 )

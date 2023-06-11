@@ -1,4 +1,4 @@
-import React ,{useState,useEffect}from "react";
+import React,{useState} from "react";
 import "./project.css"
  function Projects(props){
 const [showComp, setShowComp]=useState(false);
@@ -27,52 +27,35 @@ function hideContent(){
 }
 
 
-// imageUrl:"",
-// title:"",
-// gitDeomoUrl:"",
-// demoUrl:""
-// }
-const [data, setData] = useState([{
-  imageUrl:"",
-    title:"",
-    gitDeomoUrl:"",
-    demoUrl:"",
-
-}]);
-useEffect(() => {
-   fetch('http://localhost:9000/users/get/all/project')
-     .then(response =>response.json())
-     .then(res=>{
-       setData(res);
-     console.log(data);
-     })
-     .catch(error => {
-       console.error(error.message);
-     });
- }, []);
-
     return(
-<div className="mainDivProject" onMouseOver={showContent} onMouseOut={hideContent}>
-   
+
+<div className="mainDivProject" onMouseOver={showContent} onMouseOut={hideContent} >
+
 { hideComp &&  <div  style={style2}  id="hideMeDiv">< img src={props.url} alt="" id="hideMe"/> </div> }
 { showComp &&  <div  style={style}><br />
-<div className="divImage">
+
+ 
+  <div className="divImage">
 <img src={props.url} alt="" />
 </div>
 <br />
 <p><span>project number  {props.num}
- </span > <br /><span style={{color:"white"}}>project manager {props.name} </span><br /> 
- <span style={{color:"black"}}> done by</span></p>
+ </span > <br /><span style={{color:"white"}}>project title {props.name} </span><br /> 
+ <span style={{color:"black"}}> done by clovert</span></p>
 <br />
 <div className="btnDiv">
-<button id="btnGit">Github</button>
-<button id="btnDemo">Live Demo</button>
+<a href={props.gitDeomoUrl}><button id="btnGit">Github</button></a>
+<a href={props.demoUrl}><button id="btnDemo">Live Demo</button></a>
 </div>
+
 </div>
  }
 </div>
+     
 
-    );
+     )
+
+
 }
 
 export default Projects;

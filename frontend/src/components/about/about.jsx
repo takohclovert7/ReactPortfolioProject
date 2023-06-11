@@ -2,6 +2,7 @@ import React from "react";
 import "./about.css";
 import {FaGithub} from 'react-icons/fa'
 import me from "../images/junior.jpg";
+import 'bootstrap/dist/css/bootstrap.min.css';
  function About(){
 
     return(
@@ -20,7 +21,7 @@ import me from "../images/junior.jpg";
            </div>
     </div></div>
 
-<div className="rightSide">
+<div className="rightSide  ">
     <div className="up">
         <div className="experience one"><br />
            <span><FaGithub/></span><br />
@@ -53,8 +54,8 @@ import me from "../images/junior.jpg";
 </div>
 
 
-</div>
-<button id="btnTalk">let's talk</button>
+</div><a href="#contact" >
+<button id="btnTalk">let's talk</button></a>
 </section>
 </div>
     );

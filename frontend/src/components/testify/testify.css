@@ -35,7 +35,7 @@
 }
 .click-me:hover
 {
- color: #0a5878;
+ color: #35e30e;
  background-color: white;
 }
 .content
@@ -104,7 +104,8 @@ label
  background-color: rgba(255,255,255,0.07);
  border-radius: 3px;
  border: 2px solid black;
-
+font-size: large;
+font-weight: bold;
 
  margin-top: 8px;
 

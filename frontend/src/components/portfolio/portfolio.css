@@ -1,7 +1,4 @@
-.portfolioMainDiv .CenterDiv .threeInOne{
-    display: flex;
-    
-}
+
 
 .portfolioMainDiv .CenterDiv {
     padding-left: 150px;
@@ -9,7 +6,7 @@
 
 
 .portfolioMainDiv {
-    margin-top: 130px;
+    margin-top: 10px;
 }
 .portfolioMainDiv h6{
     font-size: small;
@@ -20,4 +17,13 @@
     font-size: x-large;
     font-weight: bolder;
     color:rgba(179, 174, 174,0.9);
+}
+#project{
+    /* background-color: rgb(143, 127, 127); */
+    width: 350px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+#rowDiv{
+    width: 100%;
 }

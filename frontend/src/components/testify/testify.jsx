@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import "./testify.css"
-// import { MultipartFile } from "multer";
+
 const Testify= () => {
  
   const [upload, setUpload ]= useState({
@@ -8,7 +8,7 @@ const Testify= () => {
     email:"",
     testimonialText:""
   });
-  const [uploadError, setUploadError] = useState(null);
+
 
 function handleChange(event){
   setUpload(prestate=>{
@@ -20,9 +20,8 @@ function handleChange(event){
 }
 
 function handleSubmit(e){
-  e.preventDefault();
+  // e.preventDefault();
 
-console.log(upload)
   fetch('http://localhost:9000/users/upload/testimonies',{
     method:"POST",
     body:JSON.stringify(upload),
@@ -41,7 +40,7 @@ console.log(upload)
   
   <div className="center">
     <input type="checkbox" id="click" />
-    <label htmlFor="click" className="click-me"> TESTIFY </label>
+    <label htmlFor="click" className="click-me" style={{color:"white"}} > TESTIFY </label>
     <div className="content"><label htmlFor="click" id="temp">x</label>
       <div className="text">
       TESTIFY

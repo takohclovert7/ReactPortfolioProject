@@ -4,7 +4,7 @@ import './experience.css';
 const Experience = () => {
   const experienceData = [
     {
-      title: 'React js expert',
+      title: 'python js expert',
       image: 'https://i1.wp.com/qavalidation.com/wp-content/uploads/2018/02/python-logo.png',
     },
     {

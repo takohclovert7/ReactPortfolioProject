@@ -5,7 +5,7 @@ import {FaFacebookF} from 'react-icons/fa'
 
 const HeaderSocial = () => {
 return (
-<div className='header__social'>
+<div className='header__social ' style={{color:"black"}}>
 <a href='https://linkedin.com' target='blank'><BsLinkedin/> </a>
 <a href='https://github.com/takohclovert7' target='blank'><FaGithub/> </a> 
 <a href='https://facebook.com' target='blank'><FaFacebookF/> </a>

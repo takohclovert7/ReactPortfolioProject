@@ -1,7 +1,8 @@
 header{
-    height: 100vh; /*vh correspond to viewport height*/
-    padding-top: 2.5rem;
+    height: 65vh; /*vh correspond to viewport height*/
+
     overflow: hidden;
+   
     }
     .header__container{
     height: 100%;
@@ -13,6 +14,9 @@ header{
     display: flex; 
     gap: 1.2rem;
     justify-content: center;
+}
+.header__social a{
+    color:black
 }
 .header__social{
     color: black;
@@ -29,7 +33,7 @@ after the social icons*/
 content: '';
 width: 1px;
 height: 2rem;
-background: var(--color-primary);
+background:black;
 }
 .my_image{
     background: linear-gradient(
@@ -37,11 +41,13 @@ background: var(--color-primary);
     width: 22rem;
     Height:20rem;
     position: absolute;
+    margin-left:180px;
     left: calc(50% - 11rem); /*this help to place the image to the middle of screen*/
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     /* border-radius: 12rem 12rem 12rem 12rem; */
-    border-radius: 50%;
+    border-radius:40%;
     overflow: hidden;
+
     /* padding: 0rem 1.5rem 1.5rem 1.5rem; */
     }
     .scroll__down{
@@ -85,3 +91,7 @@ font-weight: bold;
         border: 1px solid black;
         color:black
     }
+.leftHeader{
+    width: 600px;
+    height: 300px;
+}
