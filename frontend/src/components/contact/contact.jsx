@@ -24,8 +24,6 @@ function changeme(event){
 
 
 const sendEmail = (e) => {
-
-
 emailjs.send('service_0ofkt0k', 'template_llc6mjc', formData,"13P7L1lH2gV9ZHxiW")
     .then(function(response) {
        console.log('SUCCESS!', response.status, response.text);
@@ -71,7 +69,7 @@ target='_blank'   rel="noreferrer">Whatsapp me</a>
 <input type="text" name='subject' placeholder='          enter email subject' required   onChange={changeme}/><br /><br />
 
 <input type="email" name='name' placeholder='             your email' required onChange={changeme}/><br /><br />
-<textarea name="notes" id="message" cols="30" rows="10"
+<textarea name="noted" id="message" cols="30" rows="10"
 placeholder='                 your message' required  onChange={changeme}></textarea><br /><br />
 <button type="submit" className='btn btn-primary' id='send'>SEND MESSAGE</button><br />
 </form></div></section>
