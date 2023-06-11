@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 import {FaGithub} from 'react-icons/fa'
-import me from "../images/project1.png";
+import me from "../images/mainImage.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
  function About(){
 
