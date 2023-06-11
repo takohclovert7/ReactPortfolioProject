@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const testimonialModel=require("../models/testiModel")
 const projectModel=require("../models/projectModel");
-const nodemailer = require("nodemailer");
+
 
 
 
@@ -15,11 +15,7 @@ const allTestimonies=await testimonialModel.find();
 
 });
 
-router.get("/junior", function(req,res){
-  FetchImage({ type: 'user', width: 400, height: 400 }).then((image)=>{
-    let randomImage = image;  })
-    console.log(randomImage);
-})
+
 
 router.post("/upload/testimonies",async function(req,res){
 
@@ -62,28 +58,6 @@ const allProject=await  projectModel.find();
 
 })
 
-// router.get("/sent/me/a/message",function(req,res){
 
-
-
-//   // Create a new Nodemailer transporter
-//   const transporter = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//       user: "your@email.com",
-//       password: "your_password",
-//     },
-//   });
-  
-//   // Send an email
-//   transporter.sendMail(mailOptions, (err, info) => {
-//     if (err) {
-//       console.log(err);
-//     } else {
-//       console.log("Email sent successfully!");
-//     }
-//   });
-  
-// })
 
 module.exports = router;
