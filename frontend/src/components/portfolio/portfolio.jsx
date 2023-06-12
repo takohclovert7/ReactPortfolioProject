@@ -55,7 +55,7 @@ var [result, setResult] = useState([{
 
 
 <div><br  /><br  />
-    <h2>UPLOAD A PROJECT USING THE BELOW BUUTON</h2>
+    <h4>UPLOAD A PROJECT USING THE BELOW BUUTON</h4>
     < UploadProject />
 </div>
 </div>

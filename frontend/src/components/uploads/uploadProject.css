@@ -14,7 +14,7 @@
 /* The popup form - hidden by default */
 .form-popup {
     margin:auto;
-width: 610px;
+width: 470px;
 height: 570px;
   border: 3px solid #000000;
 
@@ -22,13 +22,13 @@ height: 570px;
 
 /* Add styles to the form container */
 .form-container {
-  width: 600px;
+  width: 460px;
   background-color: wheat
 }
 
 /* Full-width input fields */
 .form-container input[type=text]{
-  width: 65%;
+  width: 260px;
   border: 1px solid black;
   background:wheat;
   height: 45px;
@@ -36,7 +36,7 @@ height: 570px;
 }
 .all{
   margin-top: 20px;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 /* When the inputs get focus, do something */
 .form-container input[type=text]:focus{
@@ -51,7 +51,7 @@ height: 570px;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: inherit;
   margin-bottom:1px;
   font-weight: bolder;
   opacity: 0.8;

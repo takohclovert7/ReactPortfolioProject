@@ -45,11 +45,11 @@
     }
     .rightSide{
         margin-left: 50px;
-        width: 40%;
+      
     }
     .leftSide{
         height: 600px;
-        width: 45%;
+       margin-right: 30px;
     }
     .plainText , h4{
        text-align: justify;
@@ -60,7 +60,7 @@
         height: 376px;
         background-color: rgba(0, 0, 0, 0.9);
         width: 360px;
-        margin-left: 185px;
+        margin-left: 105px;
         border-radius: 50px;
     
         /* background-position: right top, left bottom; */

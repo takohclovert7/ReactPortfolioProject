@@ -13,15 +13,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
     <h2>About me</h2>
  </center>
 
-    <div className="mainDivAbout">
-<div className="leftSide">
+    <div className="mainDivAbout row">
+<div className="leftSide col-10 col-lg-4 m-5">
     <div className="leftMainDiv">
            <div className="imageDiv">
     <img src={me} alt="" />
            </div>
     </div></div>
 
-<div className="rightSide  ">
+<div className="rightSide  col-10 col-lg-6">
     <div className="up">
         <div className="experience one"><br />
            <span><FaGithub/></span><br />

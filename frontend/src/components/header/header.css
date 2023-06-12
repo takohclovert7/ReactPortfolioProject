@@ -1,7 +1,7 @@
 header{
-    height: 65vh; /*vh correspond to viewport height*/
+    height: 80vh; /*vh correspond to viewport height*/
 
-    overflow: hidden;
+    /* overflow: hidden; */
    
     }
     .header__container{
@@ -41,7 +41,8 @@ background:black;
     width: 22rem;
     Height:20rem;
     position: absolute;
-    margin-left:180px;
+    margin-left:80px;
+    margin-bottom:30px;
     left: calc(50% - 11rem); /*this help to place the image to the middle of screen*/
     /* margin-top: 4rem; */
     /* border-radius: 12rem 12rem 12rem 12rem; */

@@ -55,28 +55,28 @@ fetch('http://localhost:9000/users/upload/project',{
 {showComp &&
 <div className="form-popup" id="myForm" style={style}>
   <form className="form-container"  onSubmit={sumitData}>
-    <h4 style={{color:"black",marginLeft:"190px"}}>UPLOAD PROJECT</h4>
+    <h4 style={{color:"black",marginLeft:"40px"}}>UPLOAD PROJECT</h4>
 <div style={{display:"flex"}}>
-    <label ><b style={{color:"black"}}> enter the project title</b></label>
-    <input  style={{marginLeft:"47px"}} type="text" placeholder="enter project image url" name="imageUrl" required onChange={getInputDates} />
+    <label ><b style={{color:"black"}}>project title</b></label>
+    <input  style={{marginLeft:"63px"}} type="text" placeholder="enter project image url" name="imageUrl" required onChange={getInputDates} />
     </div>
     <div style={{display:"flex"}}>
-    <label ><b style={{color:"black"}}>enter git repoo url</b></label> <br />
+    <label ><b style={{color:"black"}}>git repo url</b></label> <br />
     <input style={{marginLeft:"70px"}} type="text" placeholder="enter the project title" name="title" required onChange={getInputDates}  />
     </div>
 
     <div style={{display:"flex"}} className="all">
-    <label ><b style={{color:"black"}}> enter the project demo url</b></label>
-    <input style={{marginLeft:"8px"}} type="text" placeholder="enter project git url" name="gitDeomoUrl" required  onChange={getInputDates} />
+    <label ><b style={{color:"black"}}> project demo url</b></label>
+    <input  style={{marginLeft:"30px"}} type="text" placeholder="enter project git url" name="gitDeomoUrl" required  onChange={getInputDates} />
     </div>
     <div style={{display:"flex"}}>
-    <label ><b style={{color:"black"}}>enter project image url</b></label>
-    <input  style={{marginLeft:"42px"}} type="text" placeholder="enter project demo url" name="demoUrl" required onChange={getInputDates}  />
+    <label ><b style={{color:"black"}}>project image url</b></label>
+    <input  style={{marginLeft:"26px"}} type="text" placeholder="enter project demo url" name="demoUrl" required onChange={getInputDates}  />
     </div>
     <button type="submit" className="btn" >UPLOAD</button>
 
   </form>
-  <button type="button" className="btn cancel" onClick={hideContent}>Close </button>
+  <button type="button" className="cancel" onClick={hideContent}>Close </button>
 </div>
  }
         </div>
