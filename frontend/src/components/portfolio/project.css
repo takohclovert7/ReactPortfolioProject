@@ -4,7 +4,8 @@
     height: 530px;
     border-radius: 40px;
     margin-right: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
 .mainDivProject .divImage{
@@ -59,3 +60,49 @@
     overflow: hidden;
 }
 
+@media screen and (max-width: 600px) {
+ 
+    .mainDivProject{
+        width: 240px;
+        height: 400px;
+        margin-top: 10px;
+    }
+   
+    .mainDivProject p{
+        font-size:small;
+    }
+
+
+
+    .mainDivProject  .btnDiv #btnGit{
+           width: 75px;
+           height: 40px;
+           border-radius: 9px;
+           font-size: medium;
+           margin-right: 14px;
+       }
+       .mainDivProject  .btnDiv{
+        margin-left: 20px;
+      
+    }
+
+    .mainDivProject  .btnDiv #btnDemo{
+        width: 95px;
+        height: 40px;
+        font-size: small;
+        margin-right: 25px;
+    }
+    .mainDivProject .divImage{
+        width: 90%;
+        height: 40%;
+        margin-left: 13px;
+        border-radius: 30px;
+        overflow: hidden;
+    }
+} 
+
+@media screen and (min-width: 768px) { 
+  body {
+    background-color: lavender;
+  } 
+} 

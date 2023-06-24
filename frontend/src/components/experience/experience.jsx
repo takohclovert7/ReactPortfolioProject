@@ -12,7 +12,7 @@ const Experience = () => {
       image: 'https://wallpapercave.com/wp/wp4521293.png',
     },
     {
-      title: 'JavaScript (React Native)',
+      title: '  JavaScript(React Native)',
       image: 'https://logos-download.com/wp-content/uploads/2019/01/JavaScript_Logo.png',
     },
     {
@@ -35,7 +35,7 @@ const Experience = () => {
 
   return (
     <section id="experience">
-      <h3>Experience</h3>
+      <h3>Experience</h3><br /><br />
       <div className="experience__container">
         {experienceData.map((experience, index) => (
           <div key={index} className="experience__card">

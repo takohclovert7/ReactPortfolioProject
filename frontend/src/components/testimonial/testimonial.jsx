@@ -21,7 +21,7 @@ export const Testimonial = () => {
     clientName: "",
   }]);
   useEffect(() => {
-     fetch('http://localhost:9000/users/get/testimonies')
+     fetch('https://takohclovert-backend.cyclic.app/users/get/testimonies')
        .then(response =>response.json())
        .then(res=>{
          setData(res);
@@ -35,7 +35,7 @@ export const Testimonial = () => {
     <section id="testimonial">
       <h5>Review from client</h5>
       <h2>Testimonials</h2>
-
+      <center>
   <Swiper className="container testimonials__container"
       modules={[Pagination, Navigation, Scrollbar, A11y]}
       spaceBetween={40}
@@ -49,13 +49,14 @@ export const Testimonial = () => {
                 <img src={Image} alt="client avatar" />
               </div>
               <h5 className="client__name"> <span style={{color:"brown",marginRight:'25px'}} > Client name  </span>    {testi.clientName} </h5>
-              <p className="client__name"> <span  style={{color:"brown",marginRight:'25px'}} >client email </span>     {testi.clientEmail} </p>
-              <small style={{color:"black",fontWeight:"bold"}} className="client__review">===message===`<br /> {testi.testimonyMessage} </small>
+              <p className="client__email"> <span  style={{color:"brown",marginRight:'25px'}} >client email </span>     {testi.clientEmail} </p>
+              <small style={{color:"black",fontWeight:"bold"}} className="client__review">===message===<br /> {testi.testimonyMessage} </small>
             </SwiperSlide>
+           
           );
         })} 
       </Swiper>
-
+      </center>
 <Testify /  > 
    
     </section>

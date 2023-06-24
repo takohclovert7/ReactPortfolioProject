@@ -1,13 +1,13 @@
 header{
-    height: 80vh; /*vh correspond to viewport height*/
+    height: 45vh; /*vh correspond to viewport height*/
 
-    /* overflow: hidden; */
-   
     }
     .header__container{
     height: 100%;
-    text-align: center;
-    position: relative;
+    display: flex;
+   position: absolute;
+   left: 100px;
+    justify-content: space-between;
     }
     .cta{
     margin-top: 2.5rem;
@@ -24,9 +24,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap:0.8rem;
-position: absolute;
-left: 0;
-bottom: 3rem;
+
 }
 .header__social::after{ /*the after tag help us to draw the vertical line we have
 after the social icons*/
@@ -36,20 +34,15 @@ height: 2rem;
 background:black;
 }
 .my_image{
-    background: linear-gradient(
-    var(--color-primary), transparent);
-    width: 22rem;
-    Height:20rem;
-    position: absolute;
-    margin-left:80px;
+    background-color: wheat;
+    width: 28rem;
+    Height:24rem;
+    float: left;
     margin-bottom:30px;
-    left: calc(50% - 11rem); /*this help to place the image to the middle of screen*/
-    /* margin-top: 4rem; */
-    /* border-radius: 12rem 12rem 12rem 12rem; */
-    border-radius:40%;
+    border-radius:10%;
     overflow: hidden;
 
-    /* padding: 0rem 1.5rem 1.5rem 1.5rem; */
+
     }
     .scroll__down{
     position: absolute;
@@ -60,27 +53,16 @@ background:black;
     font-weight: 300;
     font-weight: 0.9rem;
     }
-   /*This is what we call media query: here we define the css that will be apply for a
-specific screen*/
-@media screen and(max-width:1024px) {
-    header{
-    height:68vh
-    }
-    }
-    @media screen and(max-width:600px) {
-        header{
-        height:100vh
-        }
-        .header__social, .scroll__down{
-        display: none;
-        }
-    }        
 
     .cta #lets{
    color: white;
      background-color: black;
     border: none;
 font-weight: bold;
+width: 140px;
+height: 55px;
+font-size: x-large;
+padding-top: 10px;
     }
 
     .cta #lets:hover{
@@ -90,9 +72,211 @@ font-weight: bold;
 
     .cta #download{
         border: 1px solid black;
-        color:black
+        color:black;
+        font-size: x-large;
     }
-.leftHeader{
-    width: 600px;
+.header__container .leftHeader{
+  margin-left: 20%;
     height: 300px;
+
 }
+
+
+  
+@media only screen and (min-width: 10px) and (max-width: 640px){
+    header{
+        height: 90vh; /*vh correspond to viewport height*/
+ 
+    }    
+    .header__container .leftHeader{
+      margin-left: 2%;
+        height: 300px;
+    
+    }
+    .cta #lets{
+
+   width: 110px;
+   height: 55px;
+   font-size: medium;
+   padding-top: 10px;
+       }
+    .cta #download{
+      font-size: medium;
+      padding-top: 10px;
+  }
+   
+      .header__container{
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: 1px;
+      
+      }
+      .my_image{
+        width: 23rem;
+        Height:21rem;
+        margin-bottom:30px;
+        margin-left: 1%;
+        border-radius:10%;
+        overflow: hidden;
+    
+    
+        }
+  } 
+  
+ 
+  @media only screen and (min-width: 639px) and (max-width: 840px){
+    header{
+        height: 90vh; /*vh correspond to viewport height*/
+       
+    }    
+    
+    .header__container .leftHeader{
+        margin-left: 10%;
+ 
+      }
+      .header__container{
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: 50px;
+        
+      }
+      .my_image{
+        width: 27rem;
+        Height:25rem;
+        margin-bottom:30px;
+        margin-left: 100px;
+        border-radius:10%;
+        overflow: hidden;
+    
+    
+        }
+  } 
+
+
+
+  @media only screen and (min-width: 838px) and (max-width: 930px){
+    header{
+        height: 90vh; /*vh correspond to viewport height*/
+ 
+    }    
+    
+    .header__container .leftHeader{
+        margin-left: 23%;
+ 
+      }
+      .header__container{
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          left: 50px;
+        
+      }
+      .my_image{
+        width: 27rem;
+        Height:25rem;
+        margin-bottom:30px;
+        margin-left: 140px;
+        border-radius:10%;
+        overflow: hidden;
+    
+    
+        }
+  } 
+
+
+
+
+  @media only screen and (min-width: 1198px) and (max-width: 1230px){
+   
+    header{
+        height: 50vh; /*vh correspond to viewport height*/
+   
+    }    
+    
+    .header__container .leftHeader{
+        margin-left: 23%;
+ 
+      }
+      .header__container{
+        display: flex;
+        position: absolute;
+        left: 20px;
+      
+    }
+      .my_image{
+        width: 28rem;
+        Height:25rem;
+        margin-bottom:30px;
+        margin-right: 40px;
+        border-radius:10%;
+        overflow: hidden;
+        margin-left: 1px;
+
+      }}
+
+     
+  
+
+  
+      @media only screen and (min-width: 928px) and (max-width: 1060px){
+  
+        header{
+            height: 50vh; /*vh correspond to viewport height*/
+       
+        }    
+        
+        .header__container .leftHeader{
+            margin-left: 4%;
+     
+          }
+          .header__container{
+            display: flex;
+            position: absolute;
+            left: 20px;
+          
+        }
+          .my_image{
+            width: 24rem;
+            Height:22rem;
+            margin-bottom:30px;
+            margin-right: 40px;
+            border-radius:10%;
+            overflow: hidden;
+            margin-left: 1px;
+
+          }
+          
+        }
+        
+      @media only screen and (min-width: 1058px) and (max-width: 1200px){
+  
+        header{
+            height: 50vh; /*vh correspond to viewport height*/
+  
+        }    
+        
+        .header__container .leftHeader{
+            margin-left: 15%;
+     
+          }
+          .header__container{
+            display: flex;
+            position: absolute;
+            left: 20px;
+          
+        }
+          .my_image{
+            width: 26rem;
+            Height:24rem;
+            margin-bottom:30px;
+            margin-right: 40px;
+            border-radius:10%;
+            overflow: hidden;
+            margin-left: 1px;
+
+          }
+          
+        }
+    

@@ -34,9 +34,9 @@ emailjs.send('service_0ofkt0k', 'template_llc6mjc', formData,"13P7L1lH2gV9ZHxiW"
 
 return (
 <section id="contact">
-<h5>Get in touch</h5>
+<h5 id='h5'>Get in touch</h5>
 <h2>Contact me</h2>
-
+<center>
 <div className="container contact__container">
 <div className="contact__options">
 <h3>By</h3>
@@ -57,14 +57,14 @@ message</a>
 </article>
 <article className='contact__option'>
 <BsWhatsapp className='contact__option__icon'/>
-<p  >  <span><MdArrowCircleRight />  </span>  Whatsapp</p>
+<p  style={{color:"brown"}} >  <span ><MdArrowCircleRight />  </span>  Whatsapp</p>
 <h5 style={{color:"wheat"}}>Direct message</h5>
 <a href='https://web.whatsapp.com/send?phone=+237674633142'
 target='_blank'   rel="noreferrer">Whatsapp me</a>
 </article>
 </div>
 <section id="messageMe">
-<div id="form"><h4>Sent me a direct message</h4>
+<div id="form"><h5>Sent direct message</h5>
 <form  onSubmit={sendEmail}>
 <input type="text" name='subject' placeholder='          enter email subject' required   onChange={changeme}/><br /><br />
 
@@ -73,7 +73,9 @@ target='_blank'   rel="noreferrer">Whatsapp me</a>
 placeholder='                 your message' required  onChange={changeme}></textarea><br /><br />
 <button type="submit" className='btn btn-primary' id='send'>SEND MESSAGE</button><br />
 </form></div></section>
+
 </div>
+</center>
 </section>
 )
 }

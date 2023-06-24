@@ -8,7 +8,7 @@
 
 .navBar{
     position: fixed;
-    margin-left: 40%;
+    margin-left: 35%;
     bottom: 0;
     margin-bottom: 20px;
     z-index: 10;
@@ -41,3 +41,14 @@
 }
 
 
+
+  
+@media only screen and (min-width: 10px) and (max-width: 640px){
+
+
+    .navBar{
+
+        margin-left: 15%;
+       
+    }
+}

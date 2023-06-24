@@ -7,17 +7,19 @@ var logger = require('morgan');
 const  mongoose  = require('mongoose');
 
 const cors = require('cors'); // addition we make
-const fileUpload = require('express-fileupload'); //addition we make
 
+
+const url ="mongodb+srv://takohClovert7:Bossman123@cluster0.wesl7zk.mongodb.net/junior?retryWrites=true&w=majority"
 
 const dbURI = "mongodb://127.0.0.1:27017/junior";
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 
-mongoose.connect( dbURI, {
+mongoose.connect( url, {
   useNewUrlParser: true, 
-  useUnifiedtopology:true
+  useUnifiedtopology:true,
+
 }).then(function(){
   console.log('db connection successful an am listening for request now');
 }).catch(function(err){
@@ -41,7 +43,7 @@ app.use('/users', usersRouter);
 
 // Use CORS and File Upload modules here
 
-app.use(fileUpload());
+
 
 
 // catch 404 and forward to error handler

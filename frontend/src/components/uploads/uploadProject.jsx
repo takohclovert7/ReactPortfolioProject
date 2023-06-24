@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import "./uploadProject.css"
 function UploadProject(){
     const [showComp, setShowComp]=React.useState(false);
-    // const [hideComp, setHideComp]=React.useState(true);
+ 
     var style =null;
 
     function showContent(){
@@ -27,16 +27,20 @@ let [projectUpload, setProjectUpload]=React.useState(null)
     }
   })
  }
+
 console.log(projectUpload)
  function sumitData(event){
-fetch('http://localhost:9000/users/upload/project',{
+ 
+  event.preventDefault();
+
+fetch('https://takohclovert-backend.cyclic.app/users/upload/project',{
   method:"POST",
   body:JSON.stringify(projectUpload),
   headers: {'Content-Type': 'application/json'}
 })
 .then(response =>response.json())
 .then(res=>{
-  
+  window.location.reload();
 })
 .catch(error => {
   console.error(error);
@@ -55,23 +59,23 @@ fetch('http://localhost:9000/users/upload/project',{
 {showComp &&
 <div className="form-popup" id="myForm" style={style}>
   <form className="form-container"  onSubmit={sumitData}>
-    <h4 style={{color:"black",marginLeft:"40px"}}>UPLOAD PROJECT</h4>
-<div style={{display:"flex"}}>
-    <label ><b style={{color:"black"}}>project title</b></label>
-    <input  style={{marginLeft:"63px"}} type="text" placeholder="enter project image url" name="imageUrl" required onChange={getInputDates} />
+    <h4 className="h4Upload" style={{color:"black"}}>UPLOAD PROJECT</h4>
+<div style={{display:"flex"}} className="all">
+    <label ><b style={{color:"black"}}>Project title</b></label>
+    <input   type="text" placeholder="enter project image url" name="imageUrl" required onChange={getInputDates} />
     </div>
-    <div style={{display:"flex"}}>
-    <label ><b style={{color:"black"}}>git repo url</b></label> <br />
-    <input style={{marginLeft:"70px"}} type="text" placeholder="enter the project title" name="title" required onChange={getInputDates}  />
+    <div style={{display:"flex"}} className="all">
+    <label ><b style={{color:"black"}}>Git repo url</b></label> <br />
+    <input type="text" placeholder="enter the project title" name="title" required onChange={getInputDates}    />
     </div>
 
     <div style={{display:"flex"}} className="all">
-    <label ><b style={{color:"black"}}> project demo url</b></label>
-    <input  style={{marginLeft:"30px"}} type="text" placeholder="enter project git url" name="gitDeomoUrl" required  onChange={getInputDates} />
+    <label ><b style={{color:"black",marginTop:"2px"}}><pre  >Demo url   </pre></b></label>
+    <input  type="text" placeholder="enter project git url" name="gitDeomoUrl" required  onChange={getInputDates}    />
     </div>
-    <div style={{display:"flex"}}>
-    <label ><b style={{color:"black"}}>project image url</b></label>
-    <input  style={{marginLeft:"26px"}} type="text" placeholder="enter project demo url" name="demoUrl" required onChange={getInputDates}  />
+    <div style={{display:"flex"}} className="all">
+    <label ><b style={{color:"black"}}><pre>Image url  </pre></b></label>
+    <input  type="text" placeholder="enter project demo url" name="demoUrl" required onChange={getInputDates}   />
     </div>
     <button type="submit" className="btn" >UPLOAD</button>
 

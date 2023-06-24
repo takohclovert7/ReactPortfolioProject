@@ -12,14 +12,72 @@
 .portfolioMainDiv h3{
     font-size: x-large;
     font-weight: bolder;
-    color:rgba(179, 174, 174,0.9);
+    color:rgba(157, 155, 155, 0.9);
 }
-#project{
-    /* background-color: rgb(143, 127, 127); */
+
+.portfolioMainDiv h4{
+    font-size: x-large;
+    font-weight: bolder;
+    color:rgba(157, 155, 155, 0.9);
+    margin-left: 130px;
+}
+#project1{
     width: 350px;
-    margin-left: 80px;
     margin-bottom: 20px;
+    margin-left: 85px;
 }
+
 #rowDiv{
     width: 100%;
 }
+
+.portfolioMainDiv #projects .uploadDiv div #uploadProjectBTN{
+    width: 200px;
+}
+
+.portfolioMainDiv #projects .uploadDiv div div #summitProjectBTN{
+    width: 180px;
+    height: 50px;
+    font-size: x-large;
+    padding-top: 4px;
+}
+.portfolioMainDiv #projects .uploadDiv div div #ipt{
+    width: 320px;
+    height: 40px;
+    border: 3px solid black;
+   background-color: wheat;
+   -webkit-text-security: disc;
+
+}
+.portfolioMainDiv #projects .uploadDiv div div span{
+    font-size: xx-large;
+    color:black;
+    margin-left: 10px;
+}
+.portfolioMainDiv #projects .uploadDiv div div span:hover{
+    background-color: white;
+}
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 640px){
+    
+    .portfolioMainDiv .h3{
+        font-size: medium;
+        font-weight: bold;
+    }
+    .portfolioMainDiv #projects .uploadDiv div div #ipt{
+        width: 315px;
+       
+    
+    }
+#rowDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+    } 
+    
+  

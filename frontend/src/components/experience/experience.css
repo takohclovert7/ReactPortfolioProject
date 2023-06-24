@@ -1,5 +1,5 @@
 #experience {
-    padding: 80px 0;
+    padding: 1px 0;
   }
   
   .experience__container {
@@ -30,3 +30,21 @@
     color: black;
   }
   
+
+  
+@media screen and (max-width: 576px) {
+ #experience h3{
+margin-left: 100px;
+
+   } 
+   .experience__container{
+    margin-left: 30px;
+   }
+
+  } 
+  
+  @media screen and (min-width: 768px) { 
+    body {
+      background-color: lavender;
+    } 
+  } 

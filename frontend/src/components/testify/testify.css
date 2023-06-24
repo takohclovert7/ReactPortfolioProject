@@ -9,10 +9,9 @@
 
 .center,.content
 {
- position:ab;
+ position:abs;
  top:50%;
  left:50%;
- /* transform:translate(-50%,-50%); */
 }
 
 .click-me
@@ -40,8 +39,7 @@
 }
 .content
 {
- /* visibility:hidden;  
-  */
+
   display: none;
  width: 360px;
  height: auto;
@@ -69,10 +67,7 @@
 }
 #click:checked~.content
 {
- /* opacity:1; */
- /* visibility:visible;
- 
-  */
+
   margin: auto;
   margin-top: 20px;
   display: block;
@@ -134,3 +129,57 @@ button:hover{
     background-color: white;
     color: #000000;
 }
+
+
+@media screen and (max-width: 600px) {
+
+    .click-me
+{
+ display:block;
+ width:100px;
+ height:35px;
+ margin: auto;
+ font-size:16px;
+}
+
+.input
+{
+ height: 30px;
+ width: 100%;
+font-weight: bold;
+ margin-top: 2px;
+
+}
+label
+{
+ display: block;
+ margin-top: 10px;
+ font-size: 16px;
+ font-weight: 500;
+}
+.content
+{
+ width: 240px;
+ height: auto;
+ padding: 7px 8px 9px;
+}
+button
+{
+ width: 100%;
+ margin-top: 20px;
+ padding: 6px;
+ font-size: 12px;
+ font-weight: 600;
+ margin-bottom: 8px;
+ 
+} 
+
+
+    } 
+    
+    @media screen and (min-width: 768px) { 
+      body {
+        background-color: lavender;
+      } 
+    } 
+  

@@ -1,10 +1,14 @@
 import React from 'react';
 import './services.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDatabase, faCode, faBrain } from '@fortawesome/free-solid-svg-icons';
+import { faDatabase, faCode, faBrain,faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
 const Services = () => {
   const services = [
+    {
+      title: 'Frontend Developer',
+      icon: faChevronRight,
+    },
     {
       title: 'Backend Development',
       icon: faCode,
@@ -17,6 +21,7 @@ const Services = () => {
       title: 'Machine Learning',
       icon: faBrain,
     },
+  
   ];
 
   return (

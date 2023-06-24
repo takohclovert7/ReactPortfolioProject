@@ -32,6 +32,7 @@ router.post("/upload/testimonies",async function(req,res){
 
 
 router.post("/upload/project",async function (req,res){
+  console.log(req.body);
 const {imageUrl,title,gitDeomoUrl,demoUrl}=req.body
 const project=await projectModel.create({
 

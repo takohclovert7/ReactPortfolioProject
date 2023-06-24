@@ -17,7 +17,7 @@ var [result, setResult] = useState([{
   
   }]);
   useEffect(() => {
-     fetch('http://localhost:9000/users/get/all/project')
+     fetch('https://takohclovert-backend.cyclic.app/users/get/all/project')
        .then(response =>response.json())
        .then(res=>{
       
@@ -30,23 +30,59 @@ var [result, setResult] = useState([{
    }, []);
  let i=0;
 
+
+
+ const [inputText, setInputText] = useState('');
+    const [buttonVisible, setButtonVisible] = useState(false);
+    const [correctString, setCorrectString] = useState('@Bossman12345');
+    const [errorString, setErrorString] = useState('');
+    const [otherButtonVisible, setOtherButtonVisible] = useState(false);
+    const [divVisible, setDivVisible] = useState(true);
+    const handleChange = (event) => {
+      setInputText(event.target.value);
+    };
+  
+    const handleClick = () => {
+      setButtonVisible(true);
+      setOtherButtonVisible(false);
+      setErrorString("");
+      setDivVisible(true);
+    };
+  
+    const handleSubmit = () => {
+      setErrorString("");
+      if (inputText === correctString) {
+        setButtonVisible(false);
+        setOtherButtonVisible(true);
+        setDivVisible(false);
+      }else{
+        setErrorString("wrong admin credentials");
+      }
+    };
+  function close(){
+    setButtonVisible(false);
+  }
+
     return(
 <div className="portfolioMainDiv">
     <section id="projects">
  <h6 style={{color:"black"}}>My recent works</h6>
     <h3  style={{color:"black"}}>Portfolio</h3>
+    <h3 className="h3">Click project image to view content</h3>
     <div className="CenterDiv">
     <div  className="row"  id="rowDiv">
 
     {result.map((project) => {
         i++;
           return (
-           <div key={project._id} id="project"  className="col-4 col-md-3 col-sm-10">
+           <div key={project._id} id="project1"  className="col-4 col-lg-4 col-md-5 col-sm-11">
         
-          
+
   <Projects  num={i} url={project.imageUrl} name={project.title} gitDeomoUrl={project.gitDeomoUrl} demoUrl={project.demoUrl}/> 
+
+  
   </div>
-      
+  
           );
         })} 
   
@@ -54,9 +90,43 @@ var [result, setResult] = useState([{
 </div>
 
 
-<div><br  /><br  />
-    <h4>UPLOAD A PROJECT USING THE BELOW BUUTON</h4>
-    < UploadProject />
+<div className="uploadDiv"><br  /><br  />
+   <h3 className="h3">UPLOAD A PROJECT USING THE BELOW BUTTON</h3>
+ 
+
+    <div>
+      {divVisible &&
+        <button
+          onClick={handleClick}
+          id="uploadProjectBTN"
+        >
+        UPLOAD PROJECT
+        </button>
+ }
+        {buttonVisible && (
+          <div>
+            <h5  style={{color:"grey",textTransform:"uppercase",fontWeight:"bolder"}}>project upload is meant only for Admins</h5>
+           <br /> <input
+              type="text"
+              placeholder="Enter Admin authentication password"
+              id="ipt"
+              value={inputText}
+              onChange={handleChange}
+            /> <span onClick={close}>X</span> 
+         
+            <br />
+            <div style={{color:"red",fontWeight:"bolder"}}>{errorString}</div>
+            <button  id="summitProjectBTN" onClick={handleSubmit}>Verify Auth</button>
+          </div>
+        )}
+        {otherButtonVisible && (
+          <div> <h5  style={{color:"grey",fontWeight:"bolder",textTransform:"uppercase"}}>Click below button to upload</h5>
+               < UploadProject />
+          </div>
+    
+        )}
+      </div>
+ 
 </div>
 </div>
 

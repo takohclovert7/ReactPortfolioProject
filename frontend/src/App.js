@@ -8,7 +8,7 @@ import Portfolio from './components/portfolio/portfolio'
 import Testimonial from './components/testimonial/testimonial'
 import Contact from './components/contact/contact'
 import Footer from './components/footer/footer'
-
+// import Button from "./components/uploads/test"
 
 
 
@@ -22,6 +22,7 @@ return (
 <About />
 <Experience/><br /><br /><br /><br /><br />
 <Services/>
+{/* <Button/> */}
 <Portfolio/>
 <Testimonial/>
 <Contact/>

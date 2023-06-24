@@ -40,9 +40,8 @@ function hideContent(){
 </div>
 <br />
 <p><span>project number  {props.num}
- </span > <br /><span style={{color:"white"}}>project title {props.name} </span><br /> 
+ </span > <br /><span style={{color:"white"}}>project title    "{props.name}"</span><br /> 
  <span style={{color:"black"}}> done by clovert</span></p>
-<br />
 <div className="btnDiv">
 <a href={props.gitDeomoUrl}><button id="btnGit">Github</button></a>
 <a href={props.demoUrl}><button id="btnDemo">Live Demo</button></a>
